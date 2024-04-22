@@ -1,0 +1,95 @@
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    background-color: rgb(243, 249, 253);
+}
+
+.footer-marco {
+    background-color:  rgb(241, 177, 134);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 150px;  
+}
+
+.footer-texto-titulo {
+    background-color:  rgb(240, 151, 92);
+    align-content: center;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+
+.footer-cuadro-redes-sociales {
+    background-color:  rgb(241, 177, 134);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+}
+
+
+
+.footer-cuadro-contacto {
+    display: grid;
+    grid-template-columns: 2;
+    background-color: rgb(241, 177, 134);
+    align-content: center;
+}
+
+
+.footer-cuadro-medios-de-pago {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+}
+
+
+.fa-brands {
+    font-size: 25px;
+}
+
+.fa-square-facebook {
+color: blue;
+}
+
+
+
+.fa-square-facebook:hover{
+    color: white;
+}
+
+.fa-square-instagram {
+    color: magenta;
+}
+
+
+.fa-square-instagram:hover{
+    color: white;
+}
+
+
+.fa-youtube {
+    color: red;
+}
+
+.fa-youtube:hover{
+    color: white;
+
+}
+
+
+.fa-cc-paypal {
+    color: darkblue;
+}
+
+
+.fa-cc-mastercard {
+    color:black;
+}
+
+.fa-cc-visa {
+    color: blue;
+}
