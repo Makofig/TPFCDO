@@ -9,19 +9,41 @@
     display: none;
 }
 
-nav {
+nav{
     display: flex;
     position: fixed;
     width: 100vw;
     height: 100px;
     justify-content: space-between;
+    align-items: center;
     opacity: 65%;
     padding: 0.2rem 0;
     background-color: beige;
     transition: all 0.3s ease;
 }
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 8rem;
+    font-size: 18px; 
+}
+nav ul li{
+    cursor: pointer; 
+    transition: all 0.3s ease;
+}
+nav ul li:hover{
+    font-size: larger; 
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
 nav .menu-right a{
     cursor: pointer;
+}
+nav .menu-right a:last-child{
     padding-right: 2rem;
 }
 
@@ -33,12 +55,25 @@ main {
     flex-direction: column;
 }
 main section {
-    background-color: burlywood;
+    background-image: url(../paginas/image/Nuestros_vinos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-color: burlywood;*/
     height: 100vh;
 }
 
 footer {
     background-color: rgb(243, 249, 253);  
+}
+
+nav .menu-right{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.precio{
+    font-size: 20px;
 }
 
 .material-symbols-outlined {
@@ -57,7 +92,8 @@ footer {
 }
 
 .footer-texto-titulo {
-    background-color:  rgb(240, 151, 92);
+    background-color:  beige;
+    opacity: 65%;
     align-content: center;
     font-family: "Roboto";
     font-weight: bold;
