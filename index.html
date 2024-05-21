@@ -3,19 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/tienda-vinos.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://kit.fontawesome.com/99c9b22381.js" crossorigin="anonymous"></script>
     <title>Inicio</title>
     <!--Trabajo Practico Obligatorio Grupo 13-->
 </head>
+<style>
+    /* ESTILO DE LA PRIMERA SECCIÓN */
+    main section:first-child{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    main section .info-vinos{
+        width: auto;
+        height: 400px;
+        display: grid; 
+        grid-template-columns: 50px 1fr 50px;
+        gap: 0 1.2rem; 
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(90, 45, 27, 0.7);
+    }
+    main section .info-vinos div{
+        display: flex;
+        justify-content: center;
+    }
+    main section .info-vinos button{
+        width: 4rem;
+        height: 4rem;
+        background: transparent;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+    }
+    main section .info-vinos button span{
+        color: white;
+    }
+    main section .info-vinos div img{
+        aspect-ratio: 3/2;
+        height: 400px;
+    }
+</style>
 <body>
+    <!--Barra de navegación(NAV) para el accedo de los elementos-->
     <nav>
-        <h1>SEÑOR VINOS LOGO</h1>
+        <h1>DON VINOS</h1>
         <ul>
-            <li><a href="#tienda">Tienda</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#galeria">Galería</a></li> 
+            <li><a href="#tienda">Tíenda</a></li>       
+            <li><a href="#formulario">Contactanos</a></li>
+            <li><a href="#contacto">Redes</a></li>
         </ul>
         <div class="menu-right">
             <a>
@@ -30,25 +69,79 @@
                 </span>
             </a>
         </div>
-           
+
     </nav>
     <main>
-        <!-- CONTENIDO PRINCIPAL DE LA PAGINA -->
-        <section>
-
+        <!-- CONTENIDO PRINCIPAL DE LA PAGINA -->   
+        <section id="galeria" >
+            <div class="info-vinos">
+                <button id="izq">
+                    <span class="material-symbols-outlined">
+                        arrow_back_ios
+                    </span>
+                </button>
+                <div id="container-image">
+                    <!--Se muestra las imagenes del script -->
+                </div>
+                <button id="der">
+                    <span class="material-symbols-outlined">
+                        arrow_forward_ios
+                    </span>
+                </button>
+            </div>
         </section>
-        <section id="tienda">
-
+    
+        <section id="tienda" class="contenedor">
+          
+            <!--Sección donde se muestran los elementos que se agrega en el script-->
         </section>
-        <section id="galeria">
+             
+        <section id="formulario">
+            
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="name">Nombre</label>
+                    <label for="lastname">Apellido</label>
 
+                    <input type="text" name="name" id="name" placeholder="Nombre" required >
+                    <input type="text" name="lastname" id="lastname" placeholder="Apellido" required >
+                </div>
+                
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="ejemplo@ejemplo.com">
+                <div>
+                    <label>Sexo</label>
+                    <label for="location">Provincia</label>
+
+                    <p>
+                        Masculino <input type="radio" name="sexo"  value="masculino">
+                        Femenino <input type="radio" name="sexo"  value="femenino">
+                    </p>
+
+                    <select name="location" id="location" size="1" required>
+                        <option value="">Elige una provincia</option>
+                        <option value="chaco">Chaco</option>
+                        <option value="formosa">Formosa</option>
+                        <option value="corrientes">Corrientes</option>
+                    </select>
+                </div>               
+
+                <label for="img">Imagen</label>
+                <input type="file" name="img" id="img" >
+
+                <label for="coment">Comentario</label>
+                <textarea name="coment" id="coment" placeholder="Ingrese un comentario ..." required></textarea>
+                
+                <input type="submit" value="Enviar" >
+
+            </form>
         </section>
     </main> 
     <footer id="contacto">
         <div class="footer-marco">
-            <div class="footer-texto-titulo">CONTACTO</div>
-            <div class="footer-texto-titulo">REDES SOCIALES</div>
-            <div class="footer-texto-titulo">MEDIOS DE PAGO</div>
+            <h2 class="footer-texto-titulo">CONTACTO</h2>
+            <h2 class="footer-texto-titulo">REDES SOCIALES</h2>
+            <h2 class="footer-texto-titulo">MEDIOS DE PAGO</h2>
 
             <div class="footer-cuadro-contacto" > 
                 <div>Teléfonos: 4816-2223 · 4816-3975</div>
@@ -56,18 +149,122 @@
                 <div>Dirección: Rodríguez Peña 1886 · CABA</div>
             </div>
 
-            <div class="footer-cuadro-redes-sociales">
-                <div> <a href="https://www.facebook.com/grandcruarg" target="_blank"><i class="fa-brands fa-square-facebook"></i> </a></div>
+            <div class="footer-cuadro-medios">
+                <div> <a href="https://www.facebook.com/grandcruvinhos" target="_blank"><i class="fa-brands fa-square-facebook"></i> </a></div>
                 <div> <a href="https://instagram.com/grandcruarg" target="_blank"><i class="fa-brands fa-square-instagram"></i> </a></div>
                 <div> <a href="https://www.youtube.com/watch?v=i2pF1BgAKJE" target="_blank"><i class="fa-brands fa-youtube"></i> </a></div>
             </div>
 
-            <div class="footer-cuadro-medios-de-pago">
+            <div class="footer-cuadro-medios">
                 <div> <i class="fa-brands fa-cc-paypal"></i> </div>
                 <div> <i class="fa-brands fa-cc-mastercard"></i> </div>
                 <div> <i class="fa-brands fa-cc-visa"></i> </div>
             </div>
         </div>
+    
     </footer>
+    <script src="./js/main.js"></script>
+    <script>
+        /* Validación del email */
+        const email = document.querySelector("#email"); 
+        let validarEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/; 
+        email.addEventListener('change', (event) =>{
+            console.log(event.target.value);
+            if (validarEmail.test(event.target.value)){
+                /*alert("el email es valido");*/ 
+                event.target.style.borderColor = 'green';
+                event.target.style.color = 'green'; 
+                event.target.style.border = '2px solid';    
+            }else{
+                /*alert("el email no es valido");*/
+                event.target.style.borderColor = 'red'; 
+                event.target.style.color = 'red'; 
+                event.target.style.border = '2px solid';  
+            }
+        })
+        /* Validación del nombre y apellido */
+        const name = document.querySelector("#name");
+        const lastname = document.querySelector("#lastname"); 
+   
+        let validarText = /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/;  
+
+        name.addEventListener('change', (event) =>{
+            console.log(event.target.value);
+            if (validarText.test(event.target.value)){
+                /*alert("el nombre es valido");*/ 
+                event.target.style.borderColor = 'green';
+                event.target.style.color = 'green'; 
+                event.target.style.border = '2px solid';    
+            }else{
+                /*alert("el nombre no es valido");*/
+                event.target.style.borderColor = 'red'; 
+                event.target.style.color = 'red'; 
+                event.target.style.border = '2px solid';  
+            }
+        })
+
+        lastname.addEventListener('change', (event) =>{
+            console.log(event.target.value);
+            if (validarText.test(event.target.value)){
+                /*alert("el apellido es valido");*/ 
+                event.target.style.borderColor = 'green';
+                event.target.style.color = 'green'; 
+                event.target.style.border = '2px solid';    
+            }else{
+                /*alert("el apellido no es valido");*/
+                event.target.style.borderColor = 'red'; 
+                event.target.style.color = 'red'; 
+                event.target.style.border = '2px solid';  
+            }
+        })
+    </script>
+    <!-- Script para la sección de imagenes -->
+    <script>
+        const izquierda = document.querySelector("#izq"); 
+        const derecha = document.querySelector("#der");
+
+        const imagenes = [
+                "bodegon1.jpg",
+                "bodegon2.jpg",
+                "bodegon3.jpg",
+                "bodegon4.jpg",
+                "bodegon5.webp"
+            ];
+        const mayor = imagenes.length; 
+        const indexM = mayor - 1; 
+     
+        let index = (indexM / 2);  
+        /* Muestro la primera imagen */
+        const imageContainer = document.getElementById("container-image");
+        const imgElement = document.createElement('img'); 
+
+        imgElement.src = '/img-publicidad/' + imagenes[index]; 
+        imgElement.alt = "imagenes de Bodegones";  
+        imageContainer.appendChild(imgElement);
+
+        izquierda.addEventListener("click", ()=>{
+            indexIzq = index - 1; 
+            index--; 
+            console.log(indexIzq, index); 
+            if (index <= 0){
+                index = indexM; 
+            } 
+            imgElement.src = '/img-publicidad/' + imagenes[indexIzq]; 
+            imgElement.alt = "imagenes de Bodegones";  
+            imageContainer.appendChild(imgElement);
+        })
+        derecha.addEventListener("click", ()=>{
+            indexDer = index + 1;
+            index++;
+            console.log(indexDer, index); 
+            if (index >= indexM){
+                index = 0; 
+            } 
+            imgElement.src = '/img-publicidad/' + imagenes[indexDer]; 
+            imgElement.alt = "imagenes de Bodegones";  
+            imageContainer.appendChild(imgElement);
+        })
+
+    </script>
 </body>
 </html>
