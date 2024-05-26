@@ -16,7 +16,7 @@ nav{
     height: 80px;
     justify-content: space-between;
     align-items: center;
-    opacity: 65%;
+    opacity: 72%;
     padding: 0.2rem 0;
     background-color: beige;
     transition: all 0.3s ease;
@@ -27,7 +27,7 @@ nav ul{
     list-style: none;
     display: flex;
     gap: 8rem;
-    font-size: 18px; 
+    font-size: 20px; 
 }
 nav ul li{
     cursor: pointer; 
@@ -81,9 +81,46 @@ main section {
     background-size: cover;
     height: 100vh;
 }
+/* ESTILO DE LA PRIMERA SECCIÓN */
+main section:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main section .info-vinos{
+    width: auto;
+    height: 400px;
+    display: grid; 
+    grid-template-columns: 50px 1fr 50px;
+    gap: 0 1.2rem; 
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(90, 45, 27, 0.7);
+}
+main section .info-vinos div{
+    display: flex;
+    justify-content: center;
+}
+main section .info-vinos button{
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+main section .info-vinos button span{
+    color: white;
+}
+main section .info-vinos div img{
+    aspect-ratio: 3/2;
+    height: 400px;
+}
+
 /* ESTILOS DE LA TIENDA */
 .contenedor {
     display: grid; 
+    width: 100vw;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     justify-items: center;
@@ -186,7 +223,9 @@ main section form > div{
 input[type="text"],
      [type="email"]{
     padding: 0.4rem;
+    border: none;
 }
+
 form select{
     width: 70%;
     padding: 0.4rem;
@@ -286,5 +325,350 @@ input[type="submit"]{
 /* FIN DEL ESTILO DEL FOOTER */
 
 
+/* CARRITO */
+
+.carrito {
+    width: 35%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    right: 20px;
+    top: 85px;
+    overflow: auto;
+    position: absolute;
+    z-index: 1000;
+    transition: .3s;
+}
+
+.carrito .header-carrito{
+    background-color: rgb(185, 133, 98);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.carrito .carrito-item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #666;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.carrito .carrito-item img{
+    margin-right: 20px;
+}
+
+.carrito .carrito-item .carrito-item-titulo{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.carrito .carrito-item .selector-cantidad{
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.carrito .carrito-item .carrito-item-cantidad{
+    border: none;
+    font-size: 18px;
+    background: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.carrito .carrito-item .selector-cantidad i{
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.carrito .carrito-item .selector-cantidad i:active{
+    background-color: rgb(185, 133, 98);
+}
+
+.carrito .carrito-item .carrito-item-precio {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.carrito .carrito-item .btn-eliminar{
+    position: absolute;
+    right: 15px;
+    top: 75px; /*15px*/
+    color: #000;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
+}
+
+.carrito .carrito-item .btn-eliminar i{
+    pointer-events: none;
+}
 
 
+.carrito-total{
+    background-color: #f3f3f3;
+    padding: 30px;
+}
+
+.carrito-total .fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carrito-total .btn-pagar{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: rgb(185, 133, 98);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.carrito-total .btn-pagar:hover{
+    scale: 1.05;
+}
+/*
+@media screen and (max-width:850px) {
+    .pre-contenedor{
+        display: block;
+    }
+    .contenedor{
+        width: 100% !important;
+    }
+    .carrito{
+        width: 100%;
+        margin-left: 10px;
+    }
+}
+*/
+
+    /* Medias Queries */
+    @media screen and (max-width: 1200px) {
+        nav{
+            display: flex;
+            position: fixed;
+            width: 100vw;
+            height: 80px;
+            align-content: center;
+            justify-content: space-between;
+
+        }
+        nav ul{
+            list-style: none;
+            gap: 2rem;
+            font-size: 20px;
+        }
+
+        .contenedor{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            height: 90vh;
+            justify-content: center;
+            padding: 5px 5px 20px 5px;
+            overflow: scroll;
+        }
+
+        .contenedor  .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+            height: 390px;
+            border: 1px solid #666;
+            border-radius: 30px;
+            padding: 10px;
+            background-color:white ;
+            cursor: pointer;
+        }
+    }
+    @media screen and (max-width: 900px ){
+        nav{
+            display: flex;
+            position: fixed;
+            width: 100vw;
+            height: 80px;
+            align-content: center;
+            justify-content: space-between;
+        }
+        nav ul{
+            list-style: none;
+            gap: 2rem;
+            font-size: 16px;
+        }
+
+        .contenedor{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+            height: 90vh;
+            justify-content: center;
+            padding: 5px;
+            overflow: scroll;
+        }
+
+        .contenedor  .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+            height: 390px;
+            border: 1px solid #666;
+            border-radius: 30px;
+            padding: 10px;
+            background-color:white ;
+            cursor: pointer;
+        }
+
+        main section form{
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+            width: 25rem;
+            height: 40rem;
+            gap: 0.8rem 0;
+        }
+
+        main section form > div{
+            display: flex;
+            flex-direction: column;   
+        }
+
+        input[type="text"],
+            [type="email"]{
+            padding: 0.4rem;
+            width: 350px;
+            border: none;
+        }     
+    }
+
+    @media screen and (max-width: 428px ){
+        nav{
+            display: flex;
+            position: fixed;
+            width: 100vw;
+            height: 80px;
+            align-content: center;
+            justify-content: space-between;
+        }
+        nav ul{
+            display: none;
+        }
+        .carrito {
+            width: 20rem;
+        } 
+        main section .info-vinos{
+            width: 428px;
+            height: 600px;
+            display: flex; 
+            flex-direction: column;
+            gap: 0 1.2rem; 
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(90, 45, 27, 0.7);
+        }
+        main section .info-vinos div{
+            display: flex;
+            justify-content: center;
+        }
+        .contenedor{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 5px;
+            height: 90vh;
+            justify-content: center;
+            padding: 5px;
+            overflow: scroll;
+        }
+
+        .contenedor  .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+            height: 390px;
+            border: 1px solid #666;
+            border-radius: 30px;
+            padding: 10px;
+            background-color:white ;
+            cursor: pointer;
+        }
+        main section form{
+            display: flex;
+            font-size: 1.5rem;
+            max-width: 300px;
+            height: 400px;
+            gap: 1rem;
+        }
+
+        main section form > div{
+            display: flex;
+            flex-direction: column;   
+            gap: 1rem;
+        }
+
+        input[type="text"],
+            [type="email"]{
+            padding: 0.4rem;
+            width: 250px;
+            border: none;
+        } 
+
+        label {
+            display: none; 
+        }
+
+        input[type="submit"]{
+            width: 100px;
+            position: relative;
+            border:none;
+            background-color: rgb(185, 133, 98);
+            left: 100px;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .footer-marco {
+            background-color:  rgb(241, 177, 134);
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr;
+            height: 70vh;  
+        }
+    }
