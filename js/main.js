@@ -557,50 +557,59 @@ lastname.addEventListener('change', (event) =>{
 })
 
 /* Imagenes de la primera sección */ 
-const izquierda = document.querySelector("#izq"); 
-const derecha = document.querySelector("#der");
+const prev = document.querySelector("#izq"); 
+const next = document.querySelector("#der");
+const infoVinos = document.querySelector('.info-vinos'); 
+const containerImages = document.querySelector('.container-image');
+const images = document.querySelectorAll('.container-image .item');
+let count = images.length;
+let active = 1; 
+let leftTransform = 0; 
+let width_images = images[active].offsetWidth; 
 
+next.onclick = () =>{
+    active = active >= count - 1 ? count -1 : active + 1; 
+    runCarousel(); 
+}
+prev.onclick = () =>{
+    active = active <= 0 ? 0 : active - 1;
+    runCarousel();  
+}
+function runCarousel(){
+    prev.style.visibility = active == 0 ? 'hidden' : 'visible'; 
+    next.style.visibility = active == count -1 ? 'hidden' : 'visible'; 
+    let old_active = document.querySelector('.item.active'); 
+    
+    if (old_active) old_active.classList.remove('active'); 
+    images[active].classList.add('active'); 
+    leftTransform = width_images * (active - 1) * -1; 
+    containerImages.style.transform = `translateX(${leftTransform}px)`; 
+    console.log(count, width_images, active); 
+}
+runCarousel();
+
+
+/*
 const imagenes = [
     "bodegon1.jpg",
     "bodegon2.jpg",
     "bodegon3.jpg",
     "bodegon4.jpg",
     "bodegon5.webp"
-];
-const mayor = imagenes.length; 
-const indexM = mayor - 1; 
-     
-let index = (indexM / 2);  
-/* Muestro la primera imagen */
+]; 
+
 const imageContainer = document.getElementById("container-image");
-const imgElement = document.createElement('img'); 
+imagenes.forEach(element => {
+ 
+    const divElement = document.createElement('div');
+    divElement.className = "item"; 
+    divElement.innerHTML = `
+        <img src="/img-publicidad/${element}">
+    `
+    imageContainer.appendChild(divElement);
+});
+*/
 
-imgElement.src = '/img-publicidad/' + imagenes[index]; 
-imgElement.alt = "imagenes de Bodegones";  
-imageContainer.appendChild(imgElement);
-
-izquierda.addEventListener("click", ()=>{
-    indexIzq = index - 1; 
-    index--; 
-    console.log(indexIzq, index); 
-    if (index <= 0){
-        index = indexM; 
-    } 
-    imgElement.src = '/img-publicidad/' + imagenes[indexIzq]; 
-    imgElement.alt = "imagenes de Bodegones";  
-    imageContainer.appendChild(imgElement);
-})
-derecha.addEventListener("click", ()=>{
-    indexDer = index + 1;
-    index++;
-    console.log(indexDer, index); 
-    if (index >= indexM){
-        index = 0; 
-    } 
-    imgElement.src = '/img-publicidad/' + imagenes[indexDer]; 
-    imgElement.alt = "imagenes de Bodegones";  
-    imageContainer.appendChild(imgElement);
-})
 /* Carrito */
 
 /* Variable que mantiene el estado visible del carrito */
@@ -746,7 +755,6 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
 function sumarCantidad(event){
     var buttonClicked = event.target;
     var selector = buttonClicked.parentElement;
-    console.log(selector.getElementsByClassName('carrito-item-cantidad')[0].value);
     var cantidadActual = selector.getElementsByClassName('carrito-item-cantidad')[0].value;
     cantidadActual++;
     selector.getElementsByClassName('carrito-item-cantidad')[0].value = cantidadActual;
@@ -757,7 +765,6 @@ function sumarCantidad(event){
 function restarCantidad(event){
     var buttonClicked = event.target;
     var selector = buttonClicked.parentElement;
-    console.log(selector.getElementsByClassName('carrito-item-cantidad')[0].value);
     var cantidadActual = selector.getElementsByClassName('carrito-item-cantidad')[0].value;
     cantidadActual--;
     if(cantidadActual>=1){
@@ -811,7 +818,6 @@ function actualizarTotalCarrito(){
         /* quitamos el simobolo peso y el punto de milesimos. */
         var precio = parseFloat(precioElemento.innerText.replace('$','').replace('.',''));//replace('$','').replace('.',''))
         var cantidadItem = item.getElementsByClassName('carrito-item-cantidad')[0];
-        console.log(precio);
         var cantidad = cantidadItem.value;
         total = total + (precio * cantidad);
     }
@@ -826,14 +832,14 @@ function actualizarTotalCarrito(){
 const menuCarrito = document.querySelector("#tu-carrito"); 
 
 menuCarrito.addEventListener("click", ()=>{
-    console.log("clickeado "); 
+
     if (carritoVisible == false){
         hacerVisibleCarrito();
         carritoVisible = true; 
     }else{
         ocultarCarrito();
     }
-    console.log(carritoVisible);
+
 })
 
 

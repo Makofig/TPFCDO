@@ -19,6 +19,7 @@ nav{
     opacity: 72%;
     padding: 0.2rem 0;
     background-color: beige;
+    backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     z-index: 100;
 }
@@ -82,40 +83,88 @@ main section {
     height: 100vh;
 }
 /* ESTILO DE LA PRIMERA SECCIÓN */
+:root{
+    --width-circle: 150vw;
+    --radius: calc(100vw / 6); 
+}
 main section:first-child{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 main section .info-vinos{
-    width: auto;
+    position: relative;
+    overflow: hidden;
     height: 400px;
-    display: grid; 
-    grid-template-columns: 50px 1fr 50px;
-    gap: 0 1.2rem; 
-    align-items: center;
-    justify-content: space-between;
     background-color: rgb(90, 45, 27, 0.7);
 }
-main section .info-vinos div{
+main section .info-vinos .container-image{
+    position: absolute;
+    width: max-content;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
+    transition: transform .8s;
 }
-main section .info-vinos button{
+main section .info-vinos .container-image .item{
+    width: calc(var(--radius) * 2);
+    text-align: center;
+    transform: rotate(45deg);
+    transition: transform 1s;
+}
+main section .info-vinos .container-image .item img{
+    width: 90%;
+    filter: drop-shadow(0 0 20px #000);
+}
+main section .info-vinos .circle{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-mask:radial-gradient(
+        var(--radius),
+        transparent 100%, #000 
+    );
+    mask:radial-gradient(
+        var(--radius),
+        transparent 100%, #000 
+    );
+    backdrop-filter: blur(10px);
+    background: radial-gradient(
+        calc(var(--radius) + 1px),
+        #eee5 100%, #eee2
+    );
+}
+main section .info-vinos .container-image .item.active{
+    transform: rotate(0deg);
+}
+main section .info-vinos .arrow{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 50%;
+}
+main section .info-vinos .arrow #izq,
+main section .info-vinos .arrow #der{
     width: 4rem;
     height: 4rem;
     background: transparent;
     border-radius: 50%;
     border: none;
+    z-index: 100;
+    transition: .5s;
     cursor: pointer;
 }
+
 main section .info-vinos button span{
     color: white;
 }
-main section .info-vinos div img{
-    aspect-ratio: 3/2;
-    height: 400px;
-}
+main section .info-vinos button span:hover{
+    color: #555;
+} 
 
 /* ESTILOS DE LA TIENDA */
 .contenedor {
