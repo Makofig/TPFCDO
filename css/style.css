@@ -173,8 +173,8 @@ main section .info-vinos button span:hover{
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     justify-items: center;
-    padding: 20px;
-    overflow: auto;
+    /*padding: 20px;*/
+    overflow: auto;  
 }
 
 .contenedor  .item{

@@ -1,0 +1,157 @@
+{
+    "vinos": [
+        {
+            "title": "Perro Callejero Malbec", 
+            "precio": "$6.240",
+            "description": "Maduración en barricas usadas de roble francés y americano durante 6 meses." 
+        },
+        {
+            "title": "Killka - Malbec", 
+            "precio": "$5.220",
+            "description": "Color rojo violáceo, aromas que reflejan la típica fruta de malbec, ciruelas frescas y moras con un final de vainilla. En boca es amable, redondo y de final largo."
+        },
+        {
+            "title": "Santa Julia Malbec",
+            "precio": "$2.850", 
+            "description": "Expresan la tipicidad de cada variedad provenientes de las diferentes zonas vitivinícolas de Mendoza, y es un fiel reflejo de la filosofía de la bodega en la elaboración de vinos frescos y frutados.Destaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez."
+        },
+        {
+            "title": "La Linda - Malbec",
+            "precio": "$6.200 ",
+            "description": "La Linda Malbec es un vino de color rojo violáceo vivaz. En nariz expresa los aromas típicos de la variedad: frutas rojas, como guinda y mora, más notas especiadas y florales muy delicadas. Llena el paladar con intensidad frutal, muy buen cuerpo y textura sedosa.Sus taninos son maduros y su acidez equilibrada. Es un varietal de gran tipicidad y estilo moderno, elegante, de excelente estructura y volumen."
+        },
+        {
+            "title": "Escorihuela Gascón - Malbec",
+            "precio": "$7.490 ",
+            "description": "GUARDA: 60% del corte pasa 8 meses en contacto con roble francés y americano.COLOR: Rojo rubí concentrado y brillante con reflejos violáceos.NARIZ: Agradable tipicidad que se vale de aromas frutales como moras, arándanos, violetas y ciruelas. Confitura de frutos negros, especias y dejos tostados aportados por la crianza en barricas.PALADAR: Malbec de paladar sabroso y buen jugo. Ofrece buena complejidad en boca con sabores frutales en primera línea pero también especiados y balsámicos. Buen equilibrio entre el alcohol y la frescura con taninos dulces y amables. Final largo con regusto frutal. Vino ideal para carnes rojas asadas y pastas con salsas mediterráneas.POTENCIAL DE GUARDA: 8 años. "
+        },
+        {
+            "title": "Luigi Bosca - Malbec",
+            "precio": "$9.270 ",
+            "description": "Es un vino de un color rojo intenso y tintes violáceos. Tiene aromas expresivos y agradables a frutos rojos maduros (ciruela) y sutiles notas especiadas y de granos de café producto de su crianza en barricas.En boca es compacto, intenso, de sabores frutales y buen volumen.Taninos dulces y acidez equilibrada. Un tinto puro, de gran cuerpo, estructura, carácter y toda la jugosidad típica de la variedad.Permanencia larga y final de boca elegante."
+        },
+        {
+            "title": "Trumpeter - Malbec",
+            "precio": "$7.800",
+            "description": "Rojo violáceo brillante, seduce con sus aromas frutales (ciruela) y especiados (canela, cardamomo, pimienta negra). Posee gran cuerpo y su vivaz estructura acentúa los taninos intensos que se vuelven aterciopelados en el retrogusto."
+        },
+        {
+            "title": "Salentein - Reserva Malbec",
+            "precio": "$7.390 ",
+            "description": "A la vista presenta color rojo/violeta de alta intensidad.En nariz se percibe fresco, intenso y complejo, se destacan aromas a frutos rojos, bayas negras, delicadas notas florales.En la boca presenta entrada dulce y suave, es fresco, frutado y de buena intensidad, amplio en la media boca y largo final"
+        },
+        {
+            "title": "Cafayate - Malbec",
+            "precio": "$2.590 ", 
+            "description": "De color rojo carmín intenso con destellos violetas oscuros, presenta aromas a frutos rojos cocidos como fresas, ciruelas y uvas pasas, fusionados con notas terrosas, cuero y especias como pimienta negra.En boca es amable y sereno, de buen cuerpo, redondo, con taninos suaves y dulces, lo que proporciona un largo y agradable final."
+        },
+        {
+            "title": "Animal - Malbec Organico ",
+            "precio": "$7.990 ",
+            "description": "Composición Varietal: Malbec 100% Crianza: 10 meses en barricas de roble francés 50% y americano 50% Maridaje: Por su estructura y complejidad este vino es ideal para acompañarlo con carnes de tipo vacuno, cerdo y pescados a la parrilla, realzando el sabor de salsas especiadas, legumbres estofadas, y quesos curados como el Manchego.Temperatura de servicio: 16 – 18 °C Potencial de guarda: 8 Años"
+        },
+        
+        {
+            "title": "Perro Callejero Malbec", 
+            "precio": "$6.240",
+            "description": "Maduración en barricas usadas de roble francés y americano durante 6 meses." 
+        },
+        {
+            "title": "Killka - Malbec", 
+            "precio": "$5.220",
+            "description": "Color rojo violáceo, aromas que reflejan la típica fruta de malbec, ciruelas frescas y moras con un final de vainilla. En boca es amable, redondo y de final largo."
+        },
+        {
+            "title": "Santa Julia Malbec",
+            "precio": "$2.850", 
+            "description": "Expresan la tipicidad de cada variedad provenientes de las diferentes zonas vitivinícolas de Mendoza, y es un fiel reflejo de la filosofía de la bodega en la elaboración de vinos frescos y frutados.Destaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez."
+        },
+        {
+            "title": "La Linda - Malbec",
+            "precio": "$6.200 ",
+            "description": "La Linda Malbec es un vino de color rojo violáceo vivaz. En nariz expresa los aromas típicos de la variedad: frutas rojas, como guinda y mora, más notas especiadas y florales muy delicadas. Llena el paladar con intensidad frutal, muy buen cuerpo y textura sedosa.Sus taninos son maduros y su acidez equilibrada. Es un varietal de gran tipicidad y estilo moderno, elegante, de excelente estructura y volumen."
+        },
+        {
+            "title": "Escorihuela Gascón - Malbec",
+            "precio": "$7.490 ",
+            "description": "GUARDA: 60% del corte pasa 8 meses en contacto con roble francés y americano.COLOR: Rojo rubí concentrado y brillante con reflejos violáceos.NARIZ: Agradable tipicidad que se vale de aromas frutales como moras, arándanos, violetas y ciruelas. Confitura de frutos negros, especias y dejos tostados aportados por la crianza en barricas.PALADAR: Malbec de paladar sabroso y buen jugo. Ofrece buena complejidad en boca con sabores frutales en primera línea pero también especiados y balsámicos. Buen equilibrio entre el alcohol y la frescura con taninos dulces y amables. Final largo con regusto frutal. Vino ideal para carnes rojas asadas y pastas con salsas mediterráneas.POTENCIAL DE GUARDA: 8 años. "
+        },
+        {
+            "title": "Luigi Bosca - Malbec",
+            "precio": "$9.270 ",
+            "description": "Es un vino de un color rojo intenso y tintes violáceos. Tiene aromas expresivos y agradables a frutos rojos maduros (ciruela) y sutiles notas especiadas y de granos de café producto de su crianza en barricas.En boca es compacto, intenso, de sabores frutales y buen volumen.Taninos dulces y acidez equilibrada. Un tinto puro, de gran cuerpo, estructura, carácter y toda la jugosidad típica de la variedad.Permanencia larga y final de boca elegante."
+        },
+        {
+            "title": "Trumpeter - Malbec",
+            "precio": "$7.800",
+            "description": "Rojo violáceo brillante, seduce con sus aromas frutales (ciruela) y especiados (canela, cardamomo, pimienta negra). Posee gran cuerpo y su vivaz estructura acentúa los taninos intensos que se vuelven aterciopelados en el retrogusto."
+        },
+        {
+            "title": "Salentein - Reserva Malbec",
+            "precio": "$7.390 ",
+            "description": "A la vista presenta color rojo/violeta de alta intensidad.En nariz se percibe fresco, intenso y complejo, se destacan aromas a frutos rojos, bayas negras, delicadas notas florales.En la boca presenta entrada dulce y suave, es fresco, frutado y de buena intensidad, amplio en la media boca y largo final"
+        },
+        {
+            "title": "Cafayate - Malbec",
+            "precio": "$2.590 ", 
+            "description": "De color rojo carmín intenso con destellos violetas oscuros, presenta aromas a frutos rojos cocidos como fresas, ciruelas y uvas pasas, fusionados con notas terrosas, cuero y especias como pimienta negra.En boca es amable y sereno, de buen cuerpo, redondo, con taninos suaves y dulces, lo que proporciona un largo y agradable final."
+        },
+        {
+            "title": "Animal - Malbec Organico ",
+            "precio": "$7.990 ",
+            "description": "Composición Varietal: Malbec 100% Crianza: 10 meses en barricas de roble francés 50% y americano 50% Maridaje: Por su estructura y complejidad este vino es ideal para acompañarlo con carnes de tipo vacuno, cerdo y pescados a la parrilla, realzando el sabor de salsas especiadas, legumbres estofadas, y quesos curados como el Manchego.Temperatura de servicio: 16 – 18 °C Potencial de guarda: 8 Años"
+        },
+        
+        {
+            "title": "Perro Callejero Malbec", 
+            "precio": "$6.240",
+            "description": "Maduración en barricas usadas de roble francés y americano durante 6 meses." 
+        },
+        {
+            "title": "Killka - Malbec", 
+            "precio": "$5.220",
+            "description": "Color rojo violáceo, aromas que reflejan la típica fruta de malbec, ciruelas frescas y moras con un final de vainilla. En boca es amable, redondo y de final largo."
+        },
+        {
+            "title": "Santa Julia Malbec",
+            "precio": "$2.850", 
+            "description": "Expresan la tipicidad de cada variedad provenientes de las diferentes zonas vitivinícolas de Mendoza, y es un fiel reflejo de la filosofía de la bodega en la elaboración de vinos frescos y frutados.Destaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez."
+        },
+        {
+            "title": "La Linda - Malbec",
+            "precio": "$6.200 ",
+            "description": "La Linda Malbec es un vino de color rojo violáceo vivaz. En nariz expresa los aromas típicos de la variedad: frutas rojas, como guinda y mora, más notas especiadas y florales muy delicadas. Llena el paladar con intensidad frutal, muy buen cuerpo y textura sedosa.Sus taninos son maduros y su acidez equilibrada. Es un varietal de gran tipicidad y estilo moderno, elegante, de excelente estructura y volumen."
+        },
+        {
+            "title": "Escorihuela Gascón - Malbec",
+            "precio": "$7.490 ",
+            "description": "GUARDA: 60% del corte pasa 8 meses en contacto con roble francés y americano.COLOR: Rojo rubí concentrado y brillante con reflejos violáceos.NARIZ: Agradable tipicidad que se vale de aromas frutales como moras, arándanos, violetas y ciruelas. Confitura de frutos negros, especias y dejos tostados aportados por la crianza en barricas.PALADAR: Malbec de paladar sabroso y buen jugo. Ofrece buena complejidad en boca con sabores frutales en primera línea pero también especiados y balsámicos. Buen equilibrio entre el alcohol y la frescura con taninos dulces y amables. Final largo con regusto frutal. Vino ideal para carnes rojas asadas y pastas con salsas mediterráneas.POTENCIAL DE GUARDA: 8 años. "
+        },
+        {
+            "title": "Luigi Bosca - Malbec",
+            "precio": "$9.270 ",
+            "description": "Es un vino de un color rojo intenso y tintes violáceos. Tiene aromas expresivos y agradables a frutos rojos maduros (ciruela) y sutiles notas especiadas y de granos de café producto de su crianza en barricas.En boca es compacto, intenso, de sabores frutales y buen volumen.Taninos dulces y acidez equilibrada. Un tinto puro, de gran cuerpo, estructura, carácter y toda la jugosidad típica de la variedad.Permanencia larga y final de boca elegante."
+        },
+        {
+            "title": "Trumpeter - Malbec",
+            "precio": "$7.800",
+            "description": "Rojo violáceo brillante, seduce con sus aromas frutales (ciruela) y especiados (canela, cardamomo, pimienta negra). Posee gran cuerpo y su vivaz estructura acentúa los taninos intensos que se vuelven aterciopelados en el retrogusto."
+        },
+        {
+            "title": "Salentein - Reserva Malbec",
+            "precio": "$7.390 ",
+            "description": "A la vista presenta color rojo/violeta de alta intensidad.En nariz se percibe fresco, intenso y complejo, se destacan aromas a frutos rojos, bayas negras, delicadas notas florales.En la boca presenta entrada dulce y suave, es fresco, frutado y de buena intensidad, amplio en la media boca y largo final"
+        },
+        {
+            "title": "Cafayate - Malbec",
+            "precio": "$2.590 ", 
+            "description": "De color rojo carmín intenso con destellos violetas oscuros, presenta aromas a frutos rojos cocidos como fresas, ciruelas y uvas pasas, fusionados con notas terrosas, cuero y especias como pimienta negra.En boca es amable y sereno, de buen cuerpo, redondo, con taninos suaves y dulces, lo que proporciona un largo y agradable final."
+        },
+        {
+            "title": "Animal - Malbec Organico ",
+            "precio": "$7.990 ",
+            "description": "Composición Varietal: Malbec 100% Crianza: 10 meses en barricas de roble francés 50% y americano 50% Maridaje: Por su estructura y complejidad este vino es ideal para acompañarlo con carnes de tipo vacuno, cerdo y pescados a la parrilla, realzando el sabor de salsas especiadas, legumbres estofadas, y quesos curados como el Manchego.Temperatura de servicio: 16 – 18 °C Potencial de guarda: 8 Años"
+        }
+
+    ]
+}
