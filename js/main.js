@@ -1,34 +1,3 @@
-/* Elementos para la tienda */
-
-const vinos = [
-    "1.png","2.png","3.png","4.png","5.png",
-    "6.png","7.png","8.png","9.png","10.png",
-    "11.png","12.png","13.png","14.png","15.png",
-    "16.png","17.png","18.png","19.png","20.png",
-    "21.png","22.png","23.png","24.png","25.png",
-    "26.png","27.png","28.png","29.png","30.png"
-];
-
-vinos.forEach( elemento =>{
-    const Productos = document.createElement('div'); 
-    const tiendaProductos = document.querySelector('.contenedor');
-
-    fetch('./datosVinos.txt')
-        .then(rep => rep.text())
-        .then( data => {
-            console.log(data); 
-        })
-
-    Productos.innerHTML = ` <div class="item">
-    <div class="titulo-item">Perro Callejero - Malbec</div>
-    <div> <img src="./imagenes/${elemento}" alt="" class="img-item"> </div>
-    <div class="precio-item"> $6.240 </div>
-    <button class="boton-item">Agregar al Carrito</button>
-    </div> `;  
-
-    tiendaProductos.appendChild(Productos);
-})
-
 var cont = 0; // Contador para los productos del carro;  
 
 /* Validación del email */
@@ -121,47 +90,77 @@ runCarousel();
 /* Variable que mantiene el estado visible del carrito */
 var carritoVisible = false;
 
-/* Espermos que todos los elementos de la pàgina cargen para ejecutar el script */
-if(document.readyState == 'loading'){
-    document.addEventListener('DOMContentLoaded', ready);
-    ocultarCarrito()
-}else{
-    ready();
-}
+/* Se oculta el carripo la primera vez */
+ocultarCarrito(); 
+/* Elementos para la tienda */
+const imagenesVinos = [
+    "1.png","2.png","3.png","4.png","5.png",
+    "6.png","7.png","8.png","9.png","10.png",
+    "11.png","12.png","13.png","14.png","15.png",
+    "16.png","17.png","18.png","19.png","20.png",
+    "21.png","22.png","23.png","24.png","25.png",
+    "26.png","27.png","28.png","29.png","30.png"
+];
+  
+fetch('./datosVinos.json')
+    .then(rep => rep.json())
+    .then(data => {
+        const { vinos } = data;
 
-function ready(){
-    
-    /* Agregremos funcionalidad a los botones eliminar del carrito */
-    var botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
-    for(var i=0;i<botonesEliminarItem.length; i++){
-        var button = botonesEliminarItem[i];
-        button.addEventListener('click',eliminarItemCarrito);
-    }
+        imagenesVinos.forEach((elemento, key) => {
+            const Productos = document.createElement('div');
+            Productos.innerHTML = `
+                <div class="item">
+                    <div class="titulo-item">${vinos[key].title}</div>
+                    <div> <img src="./imagenes/${elemento}" alt="" class="img-item"> </div>
+                    <div class="precio-item">${vinos[key].precio}</div>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+            `;
+            const tiendaProductos = document.querySelector('.contenedor');
+            tiendaProductos.appendChild(Productos);
+        });
+        /* Agregremos funcionalidad a los botones eliminar del carrito */
+        var botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
+        for(var i=0;i<botonesEliminarItem.length; i++){
+            var button = botonesEliminarItem[i];
+            button.addEventListener('click',eliminarItemCarrito);
+        }
 
-    /* Agrego funcionalidad al boton sumar cantidad */
-    var botonesSumarCantidad = document.getElementsByClassName('sumar-cantidad');
-    for(var i=0;i<botonesSumarCantidad.length; i++){
-        var button = botonesSumarCantidad[i];
-        button.addEventListener('click',sumarCantidad);
-    }
+        /* Agrego funcionalidad al boton sumar cantidad */
+        var botonesSumarCantidad = document.getElementsByClassName('sumar-cantidad');
+        for(var i=0;i<botonesSumarCantidad.length; i++){
+            var button = botonesSumarCantidad[i];
+            button.addEventListener('click',sumarCantidad);
+        }
 
-     /* Agrego funcionalidad al buton restar cantidad */
-    var botonesRestarCantidad = document.getElementsByClassName('restar-cantidad');
-    for(var i=0;i<botonesRestarCantidad.length; i++){
-        var button = botonesRestarCantidad[i];
-        button.addEventListener('click',restarCantidad);
-    }
+        /* Agrego funcionalidad al buton restar cantidad */
+        var botonesRestarCantidad = document.getElementsByClassName('restar-cantidad');
+        for(var i=0;i<botonesRestarCantidad.length; i++){
+            var button = botonesRestarCantidad[i];
+            button.addEventListener('click',restarCantidad);
+        }
 
-    /* Agregamos funcionalidad al boton Agregar al carrito */
-    var botonesAgregarAlCarrito = document.getElementsByClassName('boton-item');
-    for(var i=0; i<botonesAgregarAlCarrito.length;i++){
-        var button = botonesAgregarAlCarrito[i];
-        button.addEventListener('click', agregarAlCarritoClicked);
-    }
+        /* Agregamos funcionalidad al boton Agregar al carrito */
+        var botonesAgregarAlCarrito = document.getElementsByClassName("boton-item");
+        console.log(botonesAgregarAlCarrito.length);
+        for(var i=0; i<botonesAgregarAlCarrito.length;i++){
+            var button = botonesAgregarAlCarrito[i];
+            button.addEventListener('click', agregarAlCarritoClicked);
+        }
 
-    /* Agregamos funcionalidad al botón comprar */
-    document.getElementsByClassName('btn-pagar')[0].addEventListener('click',pagarClicked)
-}
+        /* Agregamos funcionalidad al botón comprar */
+        document.getElementsByClassName('btn-pagar')[0].addEventListener('click',pagarClicked)
+
+        /* Agregamos funcionalidad al boton Agregar al carrito */
+        var botonesAgregarAlCarrito = document.getElementsByClassName("boton-item");
+        console.log(botonesAgregarAlCarrito.length);
+        for(var i=0; i<botonesAgregarAlCarrito.length;i++){
+            var button = botonesAgregarAlCarrito[i];
+            button.addEventListener('click', agregarAlCarritoClicked);
+        }
+    })
+    .catch(error => console.error('Error fetching data:', error));
 
 /* Eliminamos todos los elementos del carrito y lo ocultamos */
 function pagarClicked(){
@@ -345,7 +344,6 @@ menuCarrito.addEventListener("click", ()=>{
     }else{
         ocultarCarrito();
     }
-
 })
 
 
