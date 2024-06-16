@@ -109,13 +109,13 @@ fetch('./datosVinos.json')
 
         imagenesVinos.forEach((elemento, key) => {
             const Productos = document.createElement('div');
+            Productos.className = "item"; 
             Productos.innerHTML = `
-                <div class="item">
-                    <div class="titulo-item">${vinos[key].title}</div>
                     <div> <img src="./imagenes/${elemento}" alt="" class="img-item"> </div>
-                    <div class="precio-item">${vinos[key].precio}</div>
+                    <div class="titulo-item">${vinos[key].title}</div>
+                    <div class="precio-item">${vinos[key].precio} c/u</div>
+                    <div style="color: green">En stock</div> 
                     <button class="boton-item">Agregar al Carrito</button>
-                </div>
             `;
             const tiendaProductos = document.querySelector('.contenedor');
             tiendaProductos.appendChild(Productos);
